@@ -1,8 +1,13 @@
-#!/usr/bin/env python3
-remove_char_at = __import__('101-remove_char_at').remove_char_at
-
-print(remove_char_at("Best School", 3))
-print(remove_char_at("Chicago", 2))
-print(remove_char_at("C is fun!", 0))
-print(remove_char_at("School", 10))
-print(remove_char_at("Python", -2))
+#!/usr/bin/python3
+def remove_char_at(str, n):
+    str1 = str
+    output = ''
+    index = 0
+    for char in str1:
+        if index == n:
+            index += 1
+            continue
+        else:
+            output += char
+            index += 1
+    return output
